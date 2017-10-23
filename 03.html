@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="after">
+<input type="button" value="wrapAll">
+<input type="button" value="wrap">
+<div class="box"></div>
+</body>
+</html>
+<script src="jquery3.2.1.js"></script>
+<script>
+    $("input").eq(0).click(function () {
+        $(".box").after("<h1>1111</h1>")
+    })
+    $("input").eq(1).click(function () {
+        $("h1").wrapAll("<div></div>")
+    })
+    $("input").eq(2).click(function () {
+        $("h1").wrap("<div></div>")
+    })
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="show">
+<input type="button" value="hide">
+<input type="button" value="slideDown">
+<input type="button" value="slideUp">
+<input type="button" value="slideToggle">
+<input type="button" value="fadeIn">
+<input type="button" value="fadeOut">
+<input type="button" value="fadeTo">
+<input type="button" value="fadeToggle">
+<input type="button" value="animate">
+<input type="button" value="stop">
+<input type="button" value="stop1">
+<div class="box"></div>
+</body>
+</html>
+<script src="jquery3.2.1.js"></script>
+<script>
+    $("input").eq(0).click(function () {
+        $(".box").show(500)
+    });
+    $("input").eq(1).click(function () {
+        $(".box").hide(500)
+    });
+    $("input").eq(2).click(function () {
+        $(".box").slideDown(500)
+    });
+    $("input").eq(3).click(function () {
+        $(".box").slideUp(500)
+    });
+    $("input").eq(4).click(function () {
+        $(".box").slideToggle(500)
+    });
+    $("input").eq(5).click(function () {
+        $(".box").fadeIn(500)
+    });
+    $("input").eq(6).click(function () {
+        $(".box").fadeOut(500)
+    });
+    $("input").eq(7).click(function () {
+        $(".box").fadeTo(500,0.5)
+    });
+    $("input").eq(8).click(function () {
+        $(".box").fadeToggle(500)
+    });
+    $("input").eq(9).click(function () {
+        $(".box").animate({
+            marginLeft:"500px"
+        },5000)
+    })
+    $("input").eq(10).click(function () {
+        $(".box").stop()
+    });
+    $("input").eq(11).click(function () {
+        $(".box").stop(true,true)
+    });
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            background: #cccccc;
+            margin: 50px auto 0px;
+        }
+        .box .lise .page{
+            float: left;
+            padding: 0 20px;
+            position: relative;
+        }
+        .cur{
+            background: #999;
+        }
+        .lishe{
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            display: none;
+        }
+        .lishe li{
+            background: #999999;
+            width: 72px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="lise">
+            <li class="page cur">
+                <span>首页</span>
+                <ul class="lishe">
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                </ul>
+            </li>
+            <li class="page">
+                <span>首页</span>
+                <ul class="lishe">
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                </ul>
+            </li>
+            <li class="page">
+                <span>首页</span>
+                <ul class="lishe">
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                </ul>
+            </li>
+            <li class="page">
+                <span>首页</span>
+                <ul class="lishe">
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                    <li>啊啊啊啊</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="jquery3.2.1.js"></script>
+<script>
+    /*$(".page").mouseover(function () {
+        $(this).addClass("cur").siblings().removeClass("cur");
+        $(this).find(".lishe").stop().slideDown(300);
+    }).mouseout(function () {
+        $(this).find(".lishe").stop().slideUp(300);
+    })*/
+    $(".page").hover(function () {
+        $(this).addClass("cur").siblings().removeClass("cur");
+        $(this).find(".lishe").stop().slideToggle(300);
+    })
+</script>
